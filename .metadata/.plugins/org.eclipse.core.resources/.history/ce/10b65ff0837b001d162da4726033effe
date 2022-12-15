@@ -1,0 +1,5 @@
+package com.cyberark.conjur.server;
+
+public class ConfigServerApp {
+
+}

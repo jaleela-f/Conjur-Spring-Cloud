@@ -1,0 +1,11 @@
+conjur.account=myConjurAccount
+conjur.appliance_url=https://localhost:8443
+conjur.authn_login=host/jenkins-frontend/NG-JALEELA-R
+conjur.api_key=2wwvf8r3x0c2ms3b8ccv411v95kr31ckner3mm0srs2nxj41f1nq68sj
+conjur.auth_token-file=/Users/Jaleela.FaizurRahman/Documents/conjur.txt
+conjur.cert_file=/Users/Jaleela.FaizurRahman/conjur-quickstart-2/conjur-quickstart/conf/policy/conjur.der
+conjur.ssl_certificate=/Users/Jaleela.FaizurRahman/conjur-quickstart-2/conjur-quickstart/conf/policy/conjur.pem
+
+conjur.mapping.dbUserName = jenkins-app.dbUserName
+conjur.mapping.dbPassword = jenkins-app.dbPassword
+conjur.mapping.dbUrl = jenkins-app.dbUrl

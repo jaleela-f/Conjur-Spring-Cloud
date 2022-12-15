@@ -1,0 +1,5 @@
+package com.cyberark.conjur.clientapp;
+
+public class CloudConfigTest {
+
+}

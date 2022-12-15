@@ -1,0 +1,10 @@
+server.port =9091
+spring.cloud.config.uri=http://localhost:8891
+#spring.config.import=optional:configserver:http://localhost:8891
+spring.application.name=conjur
+#logging-level =info
+spring.profiles.active=native
+
+spring.config.location= file://${user.home}/config-repo/conjur.properties
+
+

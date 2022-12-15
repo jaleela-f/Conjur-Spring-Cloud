@@ -1,0 +1,106 @@
+package com.cyberark.conjur.clientapp.core;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.cyberark.conjur.api.Conjur;
+//import com.cyberark.conjur.configclient.domain.ConjurAuthParam;
+
+/**
+ * The ConjurConnectionManager uses Singleton pattern to provide the Conjur Connection 
+ * object to the calling class using the getInstance()
+ *  
+ */
+public class ConjurConnectionManager {
+
+	private static Logger logger = LoggerFactory.getLogger(ConjurConnectionManager.class);
+	
+	private static Conjur conjur;
+
+	private ConjurConnectionManager() {
+
+	}
+	/**
+	 * This method takes {@code ConjurAuthParam} object which contains the Authentication parameters
+	 * and return the {@Code Conjur} Object on sucessful authentication with Conjur Server
+	 * @param ConjurAuthParam
+	 * @return Conjur
+	 */
+
+	private static Conjur getConnection(ConjurAuthParam conjurParam) {
+
+		logger.info("Inside Connection Manager get Connection with AuthParam");//+conjurParam.getConjurAccount());
+		logger.info("Environment variables>>>"+System.getProperty("CONJUR_ACCOUNT"));
+		try {
+			conjur = new Conjur();
+
+			logger.info("Connection with Conjur is successful");
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		return conjur;
+	}
+	/**
+	 * This method return the {@Code Conjur} Object on successful authentication with Conjur Server
+	 * @return Conjur
+	 */
+
+	private static Conjur getConnection() {
+
+		logger.info("Inside Connection Manager get Connection"+System.getProperty("CONJUR_ACCOUNT"));
+
+		try {
+
+			conjur = new Conjur();
+
+			logger.info("Connection with Conjur is successful");
+
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		return conjur;
+	}
+	/**
+	 * This method takes {@code ConjurAuthParam} object which contains the Authentication parameters
+	 * and return the {@Code Conjur} Object on successful authentication with Conjur Server
+	 * @param ConjurAuthParam
+	 * @return Conjur
+	 */
+	public static Conjur getInstance(ConjurAuthParam authParam) {
+		try {
+			if (conjur == null) {
+				synchronized (Conjur.class) {
+					if (conjur == null) {
+						conjur = getConnection(authParam);
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conjur;
+	}
+
+	/**
+	 * This method return the {@Code Conjur} Object on sucessful authentication with Conjur Server
+	 * @return Conjur
+	 */
+	public static Conjur getInstance() {
+		try {
+			if (conjur == null) {
+				synchronized (Conjur.class) {
+					if (conjur == null) {
+						conjur = getConnection();
+					}
+				}
+			}
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+
+		return conjur;
+	}
+
+}

@@ -1,0 +1,13 @@
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/config/ConjurConfig.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/util/ServerConstant.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/processor/ConjurValueProcessor.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/core/ConjurPropertySource.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/CloudConfigTest.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/core/ConjurConnectionManager.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/util/ConjurPropertyLoaderUtil.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/service/PropertyProcessorChain.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/env/ConjurMapProperty.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/service/DefaultPropertySourceChain.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/domain/ConjurAuthParam.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/processor/ValueProcess.java
+/Applications/ConjurCloudPlugin/ConjurCloudPlugin/src/main/java/com/cyberark/conjur/clientapp/service/CustomPropertySourceChain.java
